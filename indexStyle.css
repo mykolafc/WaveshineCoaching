@@ -1,0 +1,33 @@
+.card-img-top {
+    transition: all 0.4s ease;
+    -webkit-filter: brightness(100%); /* Chrome, Safari, Opera */
+    filter: brightness(100%);
+}
+
+.card-img-overlay {
+    display: none;
+}
+
+#planCard:hover > *:not(.card-img-overlay, .card-body) {
+    transition: all 0.4s ease;
+    -webkit-filter: brightness(50%); /* Chrome, Safari, Opera */
+    filter: brightness(50%);
+}
+
+#planCard:hover > *.card-img-overlay{
+    display: block;
+}
+
+.card {
+    transition: all .2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+svg {
+    color: white;
+
+}
