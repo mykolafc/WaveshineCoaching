@@ -1,9 +1,11 @@
-const bootstrap = require("bootstrap")
+//const bootstrap = require("bootstrap")
 
-(function () {
+function btnClick() {
     'use strict'
   
     var forms = document.querySelectorAll('.needs-validation')
+
+    var valid = true;
   
     Array.prototype.slice.call(forms)
       .forEach(function (form) {
@@ -11,12 +13,14 @@ const bootstrap = require("bootstrap")
           if (!form.checkValidity()) {
             event.preventDefault()
             event.stopPropagation()
+            valid = false;
           }
   
           form.classList.add('was-validated')
         }, false)
       })
-  })()
+      return valid;
+  }
 
 
 function showConfirm() {
